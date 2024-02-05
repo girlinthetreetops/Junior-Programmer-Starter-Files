@@ -5,7 +5,7 @@ using System.IO; //for anything reading/writing data into files.. input - output
 
 public class MainManager : MonoBehaviour
 {
-    public static MainManager Instance;
+    public static MainManager Instance { get; private set; }
 
     private void Awake()
     {
@@ -58,9 +58,7 @@ public class MainManager : MonoBehaviour
             SaveData loadData = JsonUtility.FromJson<SaveData>(jsonToLoad);
 
             chosenColor = loadData.chosenColor;
-        } 
-
-
+        }
     }
 }
 

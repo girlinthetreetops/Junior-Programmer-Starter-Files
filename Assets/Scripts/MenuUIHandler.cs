@@ -36,7 +36,6 @@ public class MenuUIHandler : MonoBehaviour
     private void StartNew()
     {
         SceneManager.LoadScene(1);
-
     }
 
     public void SaveColorClicked()
